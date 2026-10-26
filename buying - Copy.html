@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cake Order</title>
+    
+    <!--link to font awsome for inserting icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--link to css file-->
+        <link rel="stylesheet" href="style.css">
+    <!--link to java file-->
+        <link rel="stylesheet" href="ff.js">
+    
+    <style>
+        body{
+            font-family: Arial;
+            background:#161515;
+            color:white;
+            text-align:center;
+        }
+        .product{
+            background:#3e2723;
+            width:250px;
+            padding:15px;
+            margin:15px;
+            display:inline-block;
+            border-radius:10px;
+            animation: slideUp 1s ease forwards;
+            background: var(--coffee-dark);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            position: relative;
+            top: 0;
+        }
+        .product:hover{
+            transform: translateY(-15px);
+            border: 2px solid var(--coffee-gold);
+            animation: slideUp 1s ease forwards;
+        }
+        button{
+            background:#d4a017;
+            border:none;
+            padding:8px 15px;
+            cursor:pointer;
+            border-radius:5px;
+        }
+        button:active{
+            transform: translateY(3px);
+        }
+        .cart button{
+    background-color:#d4a017;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    font-size:16px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.cart button:hover{
+    background-color:#d4a017;
+}
+
+        #cart{
+            margin-top:30px;
+            background:#3e2723;
+            padding:20px;
+        }
+        /* Back button */
+.back{
+    background:white;
+    color:black;
+    border:2px solid white;
+    padding:8px 15px;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+/* Buy button */
+.buy{
+    background:#f4b400;
+    border:none;
+    padding:8px 15px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+/* Cancel button */
+.cancel{
+    background:#e74c3c;
+    color:white;
+    border:none;
+    padding:8px 15px;
+    border-radius:6px;
+    cursor:pointer;
+    margin-left:10px;
+}
+        section{
+                animation: fadeInUp 1s ease;
+            }
+        
+    </style>
+</head>
+<body>
+    
+<section>
+<h1><i class="fa-solid fa-mug-hot"></i> Welcome to Fan-Fan Coffee Shop</h1>
+<div class="product">
+    <h3>Espresso</h3>
+    <p>Price: 3,000 MMK</p>
+    <button onclick="addToCart('Espresso',3000)">Add to Cart</button>
+</div>
+<div class="product">
+    <h3>Ice-Latte</h3>
+    <p>Price: 3,000 MMK</p>
+    <button onclick="addToCart('Ice-Latte',3000)">Add to Cart</button>
+</div>
+<div class="product">
+    <h3>Americano</h3>
+    <p>Price:  3,000 MMK</p>
+    <button onclick="addToCart('Americano',3000)">Add to Cart</button>
+</div><br>
+<div class="product">
+    <h3>Macha</h3>
+    <p>Price: 3,000 MMK</p>
+    <button onclick="addToCart('Macha',3000)">Add to Cart</button>
+</div>
+<div class="product">
+    <h3>Cafe Frappe</h3>
+    <p>Price: 3,000 MMK</p>
+    <button onclick="addToCart('Cafe Frappe',3000)">Add to Cart</button>
+</div>
+<div class="product">
+    <h3>Caramel Macchiato</h3>
+    <p>Price: 3,000 MMK</p>
+    <button onclick="addToCart('Caramel Macchiato',3000)">Add to Cart</button>
+</div>
+<h1><i class="fa-solid fa-glass-water"></i>Juice</h1>
+<div class="product">
+    <h3>Avocado smoothie</h3>
+    <p>Price: 4000 MMK</p>
+    <button onclick="addToCart('Avocado smoothie',4000)">Add to Cart</button>
+</div>
+
+<div class="product">
+    <h3>Strawbreey smoothie</h3>
+    <p>Price: 4000 MMK</p>
+    <button onclick="addToCart('Strawbreey smoothie',4000)">Add to Cart</button>
+</div>
+
+<div class="product">
+    <h3>Blueberry smoothie</h3>
+    <p>Price: 4000 MMK</p>
+    <button onclick="addToCart('Blueberry smoothie',4000)">Add to Cart</button>
+</div><br>
+<div class="product">
+    <h3>Milk tea</h3>
+    <p>Price: 4000 MMK</p>
+    <button onclick="addToCart('Milk tea',4000)">Add to Cart</button>
+</div>
+<div class="product">
+    <h3>Lemon juice</h3>
+    <p>Price: 4000 MMK</p>
+    <button onclick="addToCart('Lemon juice',4000)">Add to Cart</button>
+</div>
+<div class="product">
+    <h3>Orange juice</h3>
+    <p>Price: 4000 MMK</p>
+    <button onclick="addToCart('Orange juice',4000)">Add to Cart</button>
+</div>
+
+<h1><i class="fa-solid fa-cake-candles"></i> Cakes</h1>
+
+<div class="product">
+    <h3>Chocolate Cake</h3>
+    <p>Price: 4,000 MMK</p>
+    <button onclick="addToCart('Chocolate Cake',4000)">Add to Cart</button>
+</div>
+
+<div class="product">
+    <h3>Cheese Cake</h3>
+    <p>Price: 4,000 MMK</p>
+    <button onclick="addToCart('Cheese Cake',4000)">Add to Cart</button>
+</div>
+<div class="product">
+    <h3>Carrot Cake</h3>
+    <p>Price: 4,000 MMK</p>
+    <button onclick="addToCart('Carrot Cake',4000)">Add to Cart</button>
+</div><br>
+<div class="product">
+    <h3>Tiramisu Cake</h3>
+    <p>Price: 4000 MMK</p>
+    <button onclick="addToCart('Tiramisu',4000)">Add to Cart</button>
+</div>
+
+<div class="product">
+    <h3>Red Velvet</h3>
+    <p>Price: 4000 MMK</p>
+    <button onclick="addToCart('Red Velvet',4000)">Add to Cart</button>
+</div>
+
+<div class="product">
+    <h3>Coffee Cake</h3>
+    <p>Price: 4000 MMK</p>
+    <button onclick="addToCart('Coffee Cake',4000)">Add to Cart</button>
+</div><br>
+
+
+
+
+<div id="cart">
+    <h2><i class="fa-solid fa-cart-shopping"></i>Your Cart</h2>
+    <ul id="cartItems"></ul>
+    <h3>Total: <span id="total">0</span> MMK</h3>
+    <div class="cart">
+    <button onclick="buyItems()">Buy Now</button>
+    <div class="cart">
+
+
+</div>
+    <div class="nav-buttons">
+                    <a href="product.html"><button>Back</button></a>
+                    
+     </div>
+</div>
+
+</div>
+<script>
+    let total = 0;
+
+    function addToCart(name, price){
+        let li = document.createElement("li");
+        li.textContent = name + " - " + price + " MMK";
+        document.getElementById("cartItems").appendChild(li);
+
+        total += price;
+        document.getElementById("total").textContent = total;
+    }
+</script>
+<script>
+function buyItems() {
+    alert("Thank you for your purchase! ");
+
+    // cart reset
+    document.getElementById("total").innerText = 0;
+
+    // go back to home page
+    window.location.href = "product.html";
+}
+</script>
+</section>
+
+        
+</body>
+</html>
